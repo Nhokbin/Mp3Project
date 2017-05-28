@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ava6" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+
+                    <TextView
+                        android:id="@+id/txt_custom_notification_title"
+                        android:maxLength="15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="something here" />
+
+                    <TextView
+                        android:id="@+id/txt_custom_notification_singer_name"
+                        android:maxLength="15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="something here" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/custom_notification_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_media_rew" />
+
+                <ImageButton
+                    android:id="@+id/custom_notification_play"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_media_pause" />
+
+                <ImageButton
+                    android:id="@+id/custom_notification_next"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite"
+                    android:padding="10dp"
+                    android:src="@android:drawable/ic_media_ff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/custom_notification_close"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_gravity="right"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        />
+</FrameLayout>

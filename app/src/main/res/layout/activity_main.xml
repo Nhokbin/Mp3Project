@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+    </android.support.v7.widget.Toolbar>
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        >
+        <LinearLayout
+            android:id="@+id/lnContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lnButtons"
+            android:orientation="vertical"
+            >
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:tabStripEnabled="false"
+                >
+            </TabWidget>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <ListView
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/list"
+                    android:layout_weight="1.0"/>
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/ln_online"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/txt_main_online"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:textColor="@android:color/holo_red_light"
+                            android:text="Please check you connection"/>
+                        <ListView
+                            android:focusable="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/recycler_songs"
+                            />
+                    </LinearLayout>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/screen_background_light"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/selectedfile"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:text="Not file selected"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_light"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_start"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="Start" />
+
+            <SeekBar
+                android:id="@+id/seekbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:paddingBottom="10dip" />
+
+            <TextView
+                android:id="@+id/txt_end"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="End" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_light"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/radom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:src="@android:drawable/ic_menu_revert"
+                android:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/rew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:src="@android:drawable/ic_media_rew"
+                android:tint="@color/colorPrimary" />
+
+          \
+
+            <ImageButton
+                android:id="@+id/play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:src="@android:drawable/ic_media_play"
+                android:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/ff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:src="@android:drawable/ic_media_ff"
+                android:tint="@color/colorPrimary" />
+
+            <ImageButton
+                android:id="@+id/replay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:src="@android:drawable/stat_notify_sync"
+                android:tint="@color/colorPrimary" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
